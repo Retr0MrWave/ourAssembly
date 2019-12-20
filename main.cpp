@@ -1,8 +1,10 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
+vector <int> memory;
 
 int main()
 {
@@ -14,9 +16,12 @@ int main()
 	while (!fin.eof())
 	{
 		//fetch
-		fin >> command;
+		getline(fin, command);
 		//execute
-		
+		if (command.substr(0, 3) == "SET")
+		{
+			
+		}
 	}
 
 	return 0;
