@@ -19,9 +19,9 @@ int main()
 		getline(fin, command);
 		//execute
 		if (command.substr(0, 3) == "SET")
-		{
-			stringstream cstream;
-			cstream << command;
+        {
+        	//remove "SET"
+		    command.erase(0, 4);
 		}
 	}
 
