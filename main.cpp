@@ -4,6 +4,7 @@
 #include <vector>
 #include <regex>
 #include <sstream>
+
 using namespace std;
 
 const int MEMORY_LEN = 65536;
@@ -39,7 +40,8 @@ int main()
 			adress = stoi(s);
 
 			if (adress > MEMORY_LEN-1)
-				cout << "Error: Cell in memory with this index doesn`t exist" << endl;
+				cout << "IndexOutOfError: Cell in memory with this index doesn`t exist" << endl;
+				break;
 			else memory[adress] = value;			
 		}
 	}
