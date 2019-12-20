@@ -20,7 +20,8 @@ int main()
 		//execute
 		if (command.substr(0, 3) == "SET")
 		{
-			
+			stringstream cstream;
+			cstream << command;
 		}
 	}
 
