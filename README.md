@@ -27,3 +27,6 @@ Working commands:
 SET {value} {location} - sets {value} (int) to {location}
 
 ADD {value} {location} - adds {value} (int) to {location}
+
+
+More commands coming soon...
