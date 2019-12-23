@@ -34,6 +34,7 @@ int main()
 	//command syntax templates
 	regex set("^SET \\d+ &\\d+$|^SET -\\d+ &\\d+$");
 	regex add("^ADD \\d+ &\\d+$|^ADD -\\d+ &\\d+$");
+	regex mult("^MULT \\d+ &\\d+$|^ADD -\\d+ &\\d+$");	regex div("^DIV \\d+ &\\d+$|^ADD -\\d+ &\\d+$");
 
 	// main loop
 	//fetch in loop condition
@@ -69,6 +70,36 @@ int main()
 				break;
 			}
 			else memory[adress] += value;
+		}
+		else if (regex_match(command, mult))
+		{
+			//decode
+			command.erase(0, 4);
+			vector<int> args = split(command);
+			int value = args[0];
+			int adress = args[1];
+			//execute
+			if (adress > MEMORY_LEN-1)
+			{
+				cout << "IndexOutOfError: Cell in memory with this index doesn`t exist" << endl;
+				break;
+			}
+			else memory[adress] *= value;
+		}
+		else if (regex_match(command, div))
+		{
+			//decode
+			command.erase(0, 4);
+			vector<int> args = split(command);
+			int value = args[0];
+			int adress = args[1];
+			//execute
+			if (adress > MEMORY_LEN-1)
+			{
+				cout << "IndexOutOfError: Cell in memory with this index doesn`t exist" << endl;
+				break;
+			}
+			else memory[adress] /= value;
 		}
 		else
 		{
