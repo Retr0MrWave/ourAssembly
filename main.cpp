@@ -35,6 +35,8 @@ int main()
 	regex set("^SET \\d+ &\\d+$|^SET -\\d+ &\\d+$");
 	regex add("^ADD \\d+ &\\d+$|^ADD -\\d+ &\\d+$");
 	regex mult("^MULT \\d+ &\\d+$|^MULT -\\d+ &\\d+$");	regex div("^DIV \\d+ &\\d+$|^DIV -\\d+ &\\d+$");
+	regex add_cell("^ADD_CELL &\\d+ &\\d+$");
+	
 
 	// main loop
 	//fetch in loop condition
