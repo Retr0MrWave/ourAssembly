@@ -6,7 +6,7 @@ To run your application in our assembly change the program.oa file to your progr
 
 
 
-#DOCUMENTATION
+# DOCUMENTATION
 
 
 
@@ -16,21 +16,21 @@ Here you will find all the commands in our assembly
 Arguments:
 
 
-{value} - specified in the command's description
+* {value} - specified in the command's description
 
-{location} - index in memory with an ampersand before it. For example &0 refers to the first memory cell, and &126 to 127th.
+* {location} - index in memory with an ampersand before it. For example &0 refers to the first memory cell, and &126 to 127th.
 
 
 Working commands:
 
 
-SET {value} {location} - sets {value} (int) to {location}
+* SET {value} {location} - sets {value} (int) to {location}
 
-ADD {value} {location} - adds {value} (int) to {location}
+* ADD {value} {location} - adds {value} (int) to {location}
 
-MULT {value} {location} - multiplies {locaton} by {value} (int)
+* MULT {value} {location} - multiplies {locaton} by {value} (int)
 
-DIV {value} {location} - DIV {locaton} by {value} (int) (leaves only the whole part)
+* DIV {value} {location} - DIV {locaton} by {value} (int) (leaves only the whole part)
 
 
 More commands coming soon...
