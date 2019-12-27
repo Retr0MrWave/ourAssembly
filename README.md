@@ -1,12 +1,12 @@
 This is our assembly.
 
-ALERT! THIS PROJECT ISN'T STILL FINISHED
+**ALERT! THIS PROJECT ISN'T STILL FINISHED**
 
 To run your application in our assembly change the program.oa file to your program, then compile main.cpp in any way you like and run it in the same folder as program.oa. We compile it using g++, that's why you can see a.out in the folder.
 
 
 
----DOCUMENTATION---
+#DOCUMENTATION
 
 
 
