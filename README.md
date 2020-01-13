@@ -16,9 +16,9 @@ Here you will find all the commands in our assembly
 * Arguments:
 
 
-  * {value} - specified in the command's description
+  * ```{value}``` - specified in the command's description
 
-  * {location} - index in memory with an ampersand before it. For example &0 refers to the first memory cell, and &126 to 127th.
+  * ```{location}``` - index in memory with an ampersand before it. For example ```&0``` refers to the first memory cell, and ```&126``` to 127th.
 
 
 * Working commands:
