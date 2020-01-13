@@ -1,2 +1,4 @@
 ADD -2 &4
-SET 6 &0
+SET 3 &3
+ADDC &4 &3
+PRINT &3
