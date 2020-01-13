@@ -24,13 +24,13 @@ Here you will find all the commands in our assembly
 * Working commands:
 
 
-  * SET {value} {location} - sets {value} (int) to {location}
+  * ```SET {value} {location}``` - sets {value} (int) to {location}
 
-  * ADD {value} {location} - adds {value} (int) to {location}
+  * ```ADD {value} {location}``` - adds {value} (int) to {location}
 
-  * MULT {value} {location} - multiplies {locaton} by {value} (int)
+  * ```MULT {value} {location}``` - multiplies {locaton} by {value} (int)
 
-  * DIV {value} {location} - DIV {locaton} by {value} (int) (leaves only the whole part)
+  * ```DIV {value} {location}``` - DIV {locaton} by {value} (int) (leaves only the whole part)
 
 
 More commands coming soon...
