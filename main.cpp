@@ -8,7 +8,7 @@
 using namespace std;
 
 const int MEMORY_LEN = 65536;
-int memory[MEMORY_LEN] = {0};
+int memory[MEMORY_LEN];
 
 vector<int> split(string& nums_str)
 {
@@ -41,6 +41,7 @@ int main()
 	regex multc("^MULTC &\\d+ &\\d+$");
 	regex divc("^DIVC &\\d+ &\\d+$");
 	regex print("^PRINT &\\d+$");
+	regex read("^READ &\\d+$");
 	
 	// main loop
 	//fetch in loop condition
@@ -179,6 +180,19 @@ int main()
 				break;
 			}
 			else cout << memory[adress] << endl;	
+		}
+		else if(regex_match(command, read))
+		{
+			//decode
+			command.erase(0, 5);
+			vector<int> args = split(command);
+			int adress = args[0];
+			if ((adress > MEMORY_LEN-1))
+			{
+				cout << "IndexOutOfError: Cell in memory with this index doesn`t exist" << endl;
+				break;
+			}
+			else cin >> memory[adress];	
 		}
 		else
 		{
