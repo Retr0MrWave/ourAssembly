@@ -8,7 +8,7 @@
 using namespace std;
 
 const int MEMORY_LEN = 65536;
-int memory[MEMORY_LEN];
+int memory[MEMORY_LEN] = {0};
 
 vector<int> split(string& nums_str)
 {
