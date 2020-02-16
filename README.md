@@ -30,7 +30,9 @@ Here you will find all the commands in our assembly
 
   * ```MULT {value} {location}``` - multiplies ```{locaton}``` by ```{value}``` (int)
 
-  * ```DIV {value} {location}``` - DIV ```{locaton}``` by ```{value}``` (int) (leaves only the whole part)
+  * ```DIV {value} {location}``` - divides ```{locaton}``` by ```{value}``` (int) (leaves only the whole part)
+  
+  * ```GOTO {value}``` - skip next ```{value}``` lines
 
 
 More commands coming soon...
