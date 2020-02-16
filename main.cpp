@@ -42,6 +42,7 @@ int main()
 	regex divc("^DIVC &\\d+ &\\d+$");
 	regex print("^PRINT &\\d+$");
 	regex read("^READ &\\d+$");
+	regex goto("^GOTO \\d+$");
 	
 	// main loop
 	//fetch in loop condition
@@ -193,6 +194,17 @@ int main()
 				break;
 			}
 			else cin >> memory[adress];	
+		}
+		else if (regex_match(command, goto))
+		{
+			//decode
+			command.erase(0, 5);
+			vector<int> args = split(command);
+			int len = args[0];
+			//execute
+			string ph = "";
+			for (int i = 0; i < len; i++)
+				cin >> ph;
 		}
 		else
 		{
