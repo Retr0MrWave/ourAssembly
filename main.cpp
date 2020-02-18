@@ -43,6 +43,7 @@ int main()
 	regex print("^PRINT &\\d+$");
 	regex read("^READ &\\d+$");
 	regex goto("^GOTO \\d+$");
+	regex gotofs("^GOTOFS \\d+$");
 	
 	// main loop
 	//fetch in loop condition
@@ -204,7 +205,20 @@ int main()
 			//execute
 			string ph = "";
 			for (int i = 0; i < len; i++)
-				cin >> ph;
+				fin >> ph;
+		}
+		else if (regex_match(command, gotofs))
+		{
+			//decode
+			command.erase(0, 5);
+			vector<int> args = split(command);
+			int len = args[0];
+			//execute
+			fin.close();
+			ifstream fin ("program.oa");
+			string ph = "";
+			for (int i = 0; i < len; i++)
+				fin >> ph;
 		}
 		else
 		{
